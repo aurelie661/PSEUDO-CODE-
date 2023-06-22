@@ -13,7 +13,16 @@
         <item code="1#NOMBRE#i" algoitem="i EST_DU_TYPE NOMBRE"/>
     </item>
     <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
-        <item code="12#i#i#5" algoitem="POUR i ALLANT_DE i A 5">
+        <item code="4#Veuillez saisir un nombre : #0" algoitem="AFFICHER &quot;Veuillez saisir un nombre : &quot;"/>
+        <item code="2#nbrTemp#pasliste" algoitem="LIRE nbrTemp"/>
+        <item code="15#nbrTemp &lt; 0" algoitem="TANT_QUE (nbrTemp &lt; 0) FAIRE">
+            <item code="16#debuttantque" algoitem="DEBUT_TANT_QUE"/>
+            <item code="4#Un nombre positif s'il vous plaît#1" algoitem="AFFICHER &quot;Un nombre positif s'il vous plaît&quot;"/>
+            <item code="4#Veuillez saisir un nombre : #0" algoitem="AFFICHER &quot;Veuillez saisir un nombre : &quot;"/>
+            <item code="2#nbrTemp#pasliste" algoitem="LIRE nbrTemp"/>
+            <item code="17#fintantque" algoitem="FIN_TANT_QUE"/>
+        </item>
+        <item code="12#i#i#4" algoitem="POUR i ALLANT_DE i A 4">
             <item code="13#debutpour" algoitem="DEBUT_POUR"/>
             <item code="4#Veuillez saisir un nombre : #0" algoitem="AFFICHER &quot;Veuillez saisir un nombre : &quot;"/>
             <item code="2#nbrTemp#pasliste" algoitem="LIRE nbrTemp"/>
