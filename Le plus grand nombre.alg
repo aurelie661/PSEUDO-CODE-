@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="FIN_POUR"/>
+    <description texte="" courant="AFFICHER nbr"/>
     <extension extnom="inactif"/>
     <fonction fctetat="inactif" fctcode=""/>
     <F2 F2para="" F2defaut="" F2etat="inactif" F2lignes=""/>
@@ -8,21 +8,24 @@
     <param totalBoucles="5000000" epaisseurLigne="2" maxBoucle="500000" arrondiAuto="vrai" totalAffichages="1000" nbDecimales="8" epaisseurPoint="2"/>
     <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
     <item code="100#declarationsvariables" algoitem="VARIABLES">
+        <item code="1#NOMBRE#nbrTemp" algoitem="nbrTemp EST_DU_TYPE NOMBRE"/>
         <item code="1#NOMBRE#nbr" algoitem="nbr EST_DU_TYPE NOMBRE"/>
         <item code="1#NOMBRE#i" algoitem="i EST_DU_TYPE NOMBRE"/>
-        <item code="1#NOMBRE#calcul" algoitem="calcul EST_DU_TYPE NOMBRE"/>
-        <item code="1#CHAINE#msg" algoitem="msg EST_DU_TYPE CHAINE"/>
     </item>
     <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
-        <item code="5#nbr#9#pasliste" algoitem="nbr PREND_LA_VALEUR 9"/>
-        <item code="5#i#1#pasliste" algoitem="i PREND_LA_VALEUR 1"/>
-        <item code="12#i#i#10" algoitem="POUR i ALLANT_DE i A 10">
+        <item code="12#i#i#5" algoitem="POUR i ALLANT_DE i A 5">
             <item code="13#debutpour" algoitem="DEBUT_POUR"/>
-            <item code="5#calcul#i * nbr#pasliste" algoitem="calcul PREND_LA_VALEUR i * nbr"/>
-            <item code="5#msg#i +&quot; * &quot; + nbr +&quot; = &quot; + calcul#pasliste" algoitem="msg PREND_LA_VALEUR i +&quot; * &quot; + nbr +&quot; = &quot; + calcul"/>
-            <item code="3#msg#1#pasliste" algoitem="AFFICHER msg"/>
+            <item code="4#Veuillez saisir un nombre : #0" algoitem="AFFICHER &quot;Veuillez saisir un nombre : &quot;"/>
+            <item code="2#nbrTemp#pasliste" algoitem="LIRE nbrTemp"/>
+            <item code="6#nbrTemp > nbr" algoitem="SI (nbrTemp > nbr) ALORS">
+                <item code="7#debutsi" algoitem="DEBUT_SI"/>
+                <item code="5#nbr#nbrTemp#pasliste" algoitem="nbr PREND_LA_VALEUR nbrTemp"/>
+                <item code="8#finsi" algoitem="FIN_SI"/>
+            </item>
             <item code="14#finpour" algoitem="FIN_POUR"/>
         </item>
+        <item code="4#Le plus grand nombre est : #0" algoitem="AFFICHER &quot;Le plus grand nombre est : &quot;"/>
+        <item code="3#nbr#0#pasliste" algoitem="AFFICHER nbr"/>
     </item>
     <item code="102#finalgo" algoitem="FIN_ALGORITHME"/>
 </Algo>
